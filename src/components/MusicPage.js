@@ -14,7 +14,8 @@ export default class MusicPage extends React.Component {
       <div style={{
         height: '100%',
         width: '100%',
-        marginTop: '55px'
+        marginTop: '55px',
+        minHeight: '1000px'
       }}>
         <StoneCountry />
         <BeatToBeat />
