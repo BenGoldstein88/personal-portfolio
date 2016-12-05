@@ -8,7 +8,7 @@ export default class ProjectsPage extends React.Component {
 
   render() {
     return (
-      <div>Projects Page</div>
+      <div>Projects Page TESTTESTTEST THIS IS A TEST</div>
     );
   }
 }

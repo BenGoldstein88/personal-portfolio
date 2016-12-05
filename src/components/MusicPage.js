@@ -1,4 +1,7 @@
 import React from 'react';
+import StoneCountry from './StoneCountry';
+import BeatToBeat from './BeatToBeat'
+import SushiAndMiniskirts from './SushiAndMiniskirts'
 
 export default class MusicPage extends React.Component {
 
@@ -8,8 +11,14 @@ export default class MusicPage extends React.Component {
 
   render() {
     return (
-      <div>
-      	<h1> Music Page</h1>
+      <div style={{
+        height: '100%',
+        width: '100%',
+        marginTop: '55px'
+      }}>
+        <StoneCountry />
+        <BeatToBeat />
+        <SushiAndMiniskirts />
       </div>
     );
   }

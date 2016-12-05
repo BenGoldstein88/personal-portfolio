@@ -8,7 +8,9 @@ module.exports = {
   module: {
     loaders: [
     { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
-    { test: /\.s?css$/, loader: 'style!css!sass' }     
+    { test: /\.s?css$/, loader: 'style!css!sass' },
+    { test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+loader : 'file-loader' }     
     ]
   },
   resolve: {
