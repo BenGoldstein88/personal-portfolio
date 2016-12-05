@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/@blueprintjs/core';
 
 export default class NavBarTop extends React.Component {
 

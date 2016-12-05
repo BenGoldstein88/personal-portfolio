@@ -3,12 +3,12 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    './src/index'
+  './src/index'
   ],
   module: {
     loaders: [
-      { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
-      { test: /\.s?css$/, loader: 'style!css!sass' },
+    { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
+    { test: /\.s?css$/, loader: 'style!css!sass' }     
     ]
   },
   resolve: {
@@ -24,8 +24,8 @@ module.exports = {
     hot: true
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+  new webpack.optimize.OccurenceOrderPlugin(),
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.NoErrorsPlugin()
   ]
 };
