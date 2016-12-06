@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e2f91ad0cb2797b9d98e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "773ff05dee77ad471f6c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -21628,9 +21628,7 @@
 	        { style: {
 	            height: '100%',
 	            width: '100%',
-	            marginTop: '55px',
-	            minHeight: '1000px',
-	            border: '1px solid red'
+	            marginTop: '55px'
 	          } },
 	        _react2.default.createElement(_StoneCountry2.default, null),
 	        _react2.default.createElement(_BeatToBeat2.default, null),
@@ -21843,8 +21841,7 @@
 	        'div',
 	        { style: {
 	            margin: '0 auto',
-	            width: '50%',
-	            border: '1px solid green'
+	            width: '50%'
 	          } },
 	        _react2.default.createElement(
 	          'iframe',
