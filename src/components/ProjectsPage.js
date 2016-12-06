@@ -7,13 +7,17 @@ export default class ProjectsPage extends React.Component {
   }
 
   render() {
+    var darkClass = ""
+    if(this.props.darkStatus===true) {
+      darkClass = "pt-dark"
+    }
+    
     return (
       <div style={{
       	width: '100%',
       	height: '100%',
-      	marginTop: '60px',
-      	border: '1px solid green'
-      }}>
+      	marginTop: '60px'
+      }} className={" " + darkClass}>
       	<AWikiInTimeCard />
 
       </div>

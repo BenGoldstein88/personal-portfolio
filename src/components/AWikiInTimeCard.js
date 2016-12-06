@@ -17,8 +17,7 @@ export default class AWikiInTimeCard extends React.Component {
 
   render() {
     return (
-      <div className="pt-card pt-elevation-2 pt-interactive"style={{
-      	backgroundColor: 'pink',
+      <div className="pt-card pt-elevation-2 pt-interactive" style={{
       	height: '300px',
       	width: '80%',
       	margin: '0 auto',

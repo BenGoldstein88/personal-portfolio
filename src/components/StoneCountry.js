@@ -1,36 +1,54 @@
 import React from 'react';
-
 export default class StoneCountry extends React.Component {
 
 
   constructor(props) {
     super(props);
 
-    // this.getIframelyHtml = this.getIframelyHtml.bind(this);
+    this.state = {
+      loading: true
+    }
+    this.handleLoading = this.handleLoading.bind(this)
   }
 
 
-  // getIframelyHtml() {
-  // 	return {__html: '<a href="http://bandcamp.com/EmbeddedPlayer/album=2498704726/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://bengoldstein.bandcamp.com/album/stone-country" data-iframely-url></a>'};
-  // }
+ 
 
-  // componentDidMount() {
-  // 	window.iframely && iframely.load();
-  // }
 
-// dangerouslySetInnerHTML={this.getIframelyHtml()} style={{ 
-//           width: "90%",
-//           height: "50%",
-//           margin: '0 auto'
-//         }}
+
+  handleLoading() {
+    this.setState({
+      loading: false
+    })
+  }
+
   render() {
-    return (
-      <div style={{
-        margin: '0 auto',
-        width: '50%'
-      }}>
 
-        <iframe style={{
+    var darkClass = ""
+    if(this.props.darkStatus===true) {
+      darkClass = "pt-dark"
+      console.log("dark mode")
+    }
+
+    var loadingStyle = {
+        margin: '0 auto',
+        width: '50%',
+        height: '120px'
+      }
+
+    if(this.state.loading===true){
+      loadingStyle = {
+        margin: '0 auto',
+        width: '50%',
+        height: '120px',
+        background: "url('../assets/svg/balls.svg') center center no-repeat"
+      }
+    }
+
+    return (
+      <div style={loadingStyle} className={" " + darkClass} >
+
+        <iframe onLoad={this.handleLoading} style={{
           border: '0',
           width: '100%',
           height: '120px',

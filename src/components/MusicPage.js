@@ -10,16 +10,23 @@ export default class MusicPage extends React.Component {
   }
 
   render() {
+
+    var darkClass = ""
+    if(this.props.darkStatus===true) {
+      darkClass = "pt-dark"
+    }
+
     return (
       <div style={{
         height: '100%',
         width: '100%',
-        marginTop: '55px'
-      }}>
-        <StoneCountry />
+        marginTop: '55px',
+        textAlign: 'center'
+      }} className={" " + darkClass} >
+        <StoneCountry darkStatus={this.props.darkStatus} />
         <BeatToBeat />
         <SushiAndMiniskirts />
       </div>
-    );
+      );
   }
 }

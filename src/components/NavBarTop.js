@@ -22,10 +22,16 @@ export default class NavBarTop extends React.Component {
 
 
   render() {
+      var darkClass = ""
+      var darkIcon = "pt-icon-lightbulb"
+    if(this.props.darkStatus === true) {
+      darkClass = "pt-dark"
+      darkIcon = "pt-icon-moon"
+    }
 
 
     return (
-      	<nav className="pt-navbar pt-fixed-top">
+      	<nav className={"pt-navbar pt-fixed-top " + darkClass}>
       		<div className="pt-navbar-group pt-align-left">
       			<button name="home" style={this.props.topNavStyles.home} onClick={this.handleNavButtonClick} className="pt-navbar-heading pt-button pt-minimal">
       				Ben Goldstein
@@ -41,7 +47,7 @@ export default class NavBarTop extends React.Component {
       			<button name="music" style={this.props.topNavStyles.music} onClick={this.handleNavButtonClick} className="pt-button pt-minimal">
       			Music
       			</button>
-      			<button name="settings" onClick={this.handleNavButtonClick} className="pt-button pt-minimal pt-icon-cog">
+      			<button name="dark" onClick={this.handleNavButtonClick} className={"pt-button pt-minimal " + darkIcon}>
       			</button>
       		</div>
 

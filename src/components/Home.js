@@ -17,7 +17,8 @@ export default class Home extends React.Component {
         contact: {color: "black"},
         projects: {color: "black"},
         music: {color: "black"}
-      }
+      },
+      dark: false
     }
 
     this.resetStyleState = this.resetStyleState.bind(this)
@@ -38,10 +39,9 @@ export default class Home extends React.Component {
   }
   handleTopNavClick(view) {
 
-    this.resetStyleState();
-
     switch(view) {
       case 'home':
+        this.resetStyleState();
         this.setState({
           currentView: 'home',
           topNavStyles: {
@@ -51,6 +51,7 @@ export default class Home extends React.Component {
         break;
 
       case 'contact':
+        this.resetStyleState();
         this.setState({
           currentView: 'contact',
           topNavStyles: {
@@ -60,6 +61,7 @@ export default class Home extends React.Component {
         break;
 
       case 'projects':
+        this.resetStyleState();
         this.setState({
           currentView: 'projects',
           topNavStyles: {
@@ -69,6 +71,7 @@ export default class Home extends React.Component {
         break;
 
       case 'music':
+        this.resetStyleState();
         this.setState({
           currentView: 'music',
           topNavStyles: {
@@ -76,8 +79,12 @@ export default class Home extends React.Component {
           }
         })
         break;
-      // case 'settings':
-      //   break;
+      case 'dark':
+        var opposite = !this.state.dark
+        this.setState({
+          dark: opposite
+        })
+        break;
 
       default:
         console.log("Something went wrong with the view")
@@ -96,12 +103,12 @@ export default class Home extends React.Component {
         thingToDisplay = <div style={{marginTop: "52px"}}> <ContactPage /> </div>
         break;      
       case 'projects':
-        thingToDisplay = <div style={{marginTop: "52px"}}> <ProjectsPage /> </div>
+        thingToDisplay = <div style={{marginTop: "52px"}}> <ProjectsPage darkStatus={this.state.dark} /> </div>
         break;
       case 'music':
-        thingToDisplay = <div style={{marginTop: "52px"}}> <MusicPage /> </div>
+        thingToDisplay = <div style={{marginTop: "52px"}}> <MusicPage darkStatus={this.state.dark}/> </div>
         break;
-      // case 'settings':
+      // case 'dark':
       //   break;
       default:
         thingToDisplay = "Error"
@@ -110,7 +117,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <div>
-          <NavBarTop currentView={this.state.currentView} topNavStyles={this.state.topNavStyles} onTopNavClick={this.handleTopNavClick} />
+          <NavBarTop currentView={this.state.currentView} topNavStyles={this.state.topNavStyles} onTopNavClick={this.handleTopNavClick} darkStatus={this.state.dark} />
         </div>
 
         {thingToDisplay}
