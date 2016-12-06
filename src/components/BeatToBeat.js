@@ -18,7 +18,7 @@ export default class BeatToBeat extends React.Component {
       		width: '100%',
       		height: '120px',
       		margin: '0 auto'
-      		}} src="http://bandcamp.com/EmbeddedPlayer/track=571820796/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://bengoldstein.bandcamp.com/track/beat-to-beat">Beat to Beat by Ben Goldstein</a></iframe>
+      		}} src="https://bandcamp.com/EmbeddedPlayer/track=571820796/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://bengoldstein.bandcamp.com/track/beat-to-beat">Beat to Beat by Ben Goldstein</a></iframe>
       </div>
     );
   }

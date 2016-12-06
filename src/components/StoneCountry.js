@@ -36,8 +36,8 @@ export default class StoneCountry extends React.Component {
           width: '100%',
           height: '120px',
           margin: '0 auto'
-           }} src="http://bandcamp.com/EmbeddedPlayer/album=2498704726/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless>
-          <a href="http://bengoldstein.bandcamp.com/album/stone-country">Stone Country by Ben Goldstein</a>
+           }} src="https://bandcamp.com/EmbeddedPlayer/album=2498704726/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless>
+          <a href="https://bengoldstein.bandcamp.com/album/stone-country">Stone Country by Ben Goldstein</a>
         </iframe>
   		</div>
     );

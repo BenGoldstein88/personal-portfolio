@@ -16,7 +16,7 @@ export default class SushiAndMiniskirts extends React.Component {
       		width: '100%',
       		height: '800px',
       		align: 'center'
-      	}} src="http://bandcamp.com/EmbeddedPlayer/album=1425601790/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://bengoldstein.bandcamp.com/album/sushi-miniskirts">Sushi &amp; Miniskirts by Ben Goldstein</a></iframe>
+      	}} src="https://bandcamp.com/EmbeddedPlayer/album=1425601790/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://bengoldstein.bandcamp.com/album/sushi-miniskirts">Sushi &amp; Miniskirts by Ben Goldstein</a></iframe>
       </div>
     );
   }

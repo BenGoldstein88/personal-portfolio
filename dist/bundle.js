@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3a4a29920eb8b3770a5c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e2f91ad0cb2797b9d98e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -21206,10 +21206,10 @@
 	              width: '100%',
 	              height: '120px',
 	              margin: '0 auto'
-	            }, src: 'http://bandcamp.com/EmbeddedPlayer/track=571820796/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/', seamless: true },
+	            }, src: 'https://bandcamp.com/EmbeddedPlayer/track=571820796/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/', seamless: true },
 	          _react2.default.createElement(
 	            'a',
-	            { href: 'http://bengoldstein.bandcamp.com/track/beat-to-beat' },
+	            { href: 'https://bengoldstein.bandcamp.com/track/beat-to-beat' },
 	            'Beat to Beat by Ben Goldstein'
 	          )
 	        )
@@ -21853,10 +21853,10 @@
 	              width: '100%',
 	              height: '120px',
 	              margin: '0 auto'
-	            }, src: 'http://bandcamp.com/EmbeddedPlayer/album=2498704726/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/', seamless: true },
+	            }, src: 'https://bandcamp.com/EmbeddedPlayer/album=2498704726/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/', seamless: true },
 	          _react2.default.createElement(
 	            'a',
-	            { href: 'http://bengoldstein.bandcamp.com/album/stone-country' },
+	            { href: 'https://bengoldstein.bandcamp.com/album/stone-country' },
 	            'Stone Country by Ben Goldstein'
 	          )
 	        )
@@ -21918,10 +21918,10 @@
 	              width: '100%',
 	              height: '800px',
 	              align: 'center'
-	            }, src: 'http://bandcamp.com/EmbeddedPlayer/album=1425601790/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/', seamless: true },
+	            }, src: 'https://bandcamp.com/EmbeddedPlayer/album=1425601790/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/', seamless: true },
 	          _react2.default.createElement(
 	            'a',
-	            { href: 'http://bengoldstein.bandcamp.com/album/sushi-miniskirts' },
+	            { href: 'https://bengoldstein.bandcamp.com/album/sushi-miniskirts' },
 	            'Sushi & Miniskirts by Ben Goldstein'
 	          )
 	        )
