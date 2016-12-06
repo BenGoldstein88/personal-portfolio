@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "75d6219b92b33b3329ac"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3a4a29920eb8b3770a5c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -21843,7 +21843,8 @@
 	        'div',
 	        { style: {
 	            margin: '0 auto',
-	            width: '50%'
+	            width: '50%',
+	            border: '1px solid green'
 	          } },
 	        _react2.default.createElement(
 	          'iframe',

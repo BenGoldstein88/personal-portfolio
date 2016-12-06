@@ -27,7 +27,8 @@ export default class StoneCountry extends React.Component {
     return (
       <div style={{
         margin: '0 auto',
-        width: '50%'
+        width: '50%',
+        border: '1px solid green'
       }}>
 
         <iframe style={{
