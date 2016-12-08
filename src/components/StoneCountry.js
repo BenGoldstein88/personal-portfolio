@@ -12,10 +12,6 @@ export default class StoneCountry extends React.Component {
   }
 
 
- 
-
-
-
   handleLoading() {
     this.setState({
       loading: false
@@ -23,12 +19,6 @@ export default class StoneCountry extends React.Component {
   }
 
   render() {
-
-    var darkClass = ""
-    if(this.props.darkStatus===true) {
-      darkClass = "pt-dark"
-      console.log("dark mode")
-    }
 
     var loadingStyle = {
         margin: '0 auto',
@@ -46,7 +36,7 @@ export default class StoneCountry extends React.Component {
     }
 
     return (
-      <div style={loadingStyle} className={" " + darkClass} >
+      <div style={loadingStyle}>
 
         <iframe onLoad={this.handleLoading} style={{
           border: '0',

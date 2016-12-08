@@ -1,7 +1,7 @@
 import React from 'react';
-import StoneCountry from './StoneCountry';
-import BeatToBeat from './BeatToBeat'
-import SushiAndMiniskirts from './SushiAndMiniskirts'
+import StoneCountryCard from './StoneCountryCard';
+import BeatToBeatCard from './BeatToBeatCard'
+import SushiAndMiniskirtsCard from './SushiAndMiniskirtsCard'
 
 export default class MusicPage extends React.Component {
 
@@ -23,9 +23,9 @@ export default class MusicPage extends React.Component {
         marginTop: '55px',
         textAlign: 'center'
       }} className={" " + darkClass} >
-        <StoneCountry darkStatus={this.props.darkStatus} />
-        <BeatToBeat />
-        <SushiAndMiniskirts />
+        <StoneCountryCard darkStatus={this.props.darkStatus} />
+        <BeatToBeatCard darkStatus={this.props.darkStatus}/>
+        <SushiAndMiniskirtsCard darkStatus={this.props.darkStatus}/>
       </div>
       );
   }

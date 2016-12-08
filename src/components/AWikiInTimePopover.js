@@ -13,7 +13,7 @@ export default class AWikiInTimePopover extends React.Component {
   	let popoverContent = (
             <div>
                 <h5>A Wiki in Time</h5>
-                <p>A Marriage between GoogleMaps and Wikipedia that lets you peruse an interactive worldmap through history for famous battles, explorers, disasters, and more!</p>
+                <p>Peruse an interactive worldmap through history for famous battles, explorers, disasters, and more!</p>
             </div>
         );
     return (

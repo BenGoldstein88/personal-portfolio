@@ -24,6 +24,8 @@ export default class Home extends React.Component {
     this.resetStyleState = this.resetStyleState.bind(this)
     this.handleTopNavClick = this.handleTopNavClick.bind(this)
 
+    document.body.style.backgroundColor = '#c6c9ce'
+
   }
 
   resetStyleState() {
@@ -97,10 +99,10 @@ export default class Home extends React.Component {
 
     switch(this.state.currentView) {
       case 'home':
-        thingToDisplay = <div style={{marginTop: "52px"}}> <HomePage /> </div>
+        thingToDisplay = <div style={{marginTop: "52px"}}> <HomePage darkStatus={this.state.dark} /> </div>
         break;
       case 'contact':
-        thingToDisplay = <div style={{marginTop: "52px"}}> <ContactPage /> </div>
+        thingToDisplay = <div style={{marginTop: "52px"}}> <ContactPage darkStatus={this.state.dark} /> </div>
         break;      
       case 'projects':
         thingToDisplay = <div style={{marginTop: "52px"}}> <ProjectsPage darkStatus={this.state.dark} /> </div>

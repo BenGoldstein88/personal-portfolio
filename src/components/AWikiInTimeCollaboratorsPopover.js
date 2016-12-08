@@ -1,7 +1,7 @@
 import React from 'react';
 import { Popover, PopoverInteractionKind, Position } from '@blueprintjs/core'
 
-export default class CollaboratorsPopover extends React.Component {
+export default class AWikiInTimeCollaboratorsPopover extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -19,9 +19,10 @@ export default class CollaboratorsPopover extends React.Component {
 			interactionKind={PopoverInteractionKind.HOVER}
 			popoverClassName="pt-popover-content-sizing"
 			position={Position.BOTTOM}
-			useSmartPositioning={false} 
+			useSmartPositioning={false}
+
 			>
-			<button className="pt-button pt-intent-success">Collaborators</button>
+			<button style={{marginLeft: '15px', marginRight: '15px'}}  className="pt-button pt-intent-success">Collaborators</button>
 			</Popover>
 
 			);
