@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "862ec5416dd59b7a7e6e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f82756c63790508d2934"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -31206,6 +31206,8 @@
 	    _this.resetStyleState = _this.resetStyleState.bind(_this);
 	    _this.handleTopNavClick = _this.handleTopNavClick.bind(_this);
 
+	    document.body.style.backgroundColor = '#c6c9ce';
+
 	    return _this;
 	  }
 
@@ -31331,8 +31333,7 @@
 	        null,
 	        _react2.default.createElement(
 	          'div',
-	          { style: { backgroundColor: '#c6c9ce'
-	            } },
+	          null,
 	          _react2.default.createElement(_NavBarTop2.default, { currentView: this.state.currentView, topNavStyles: this.state.topNavStyles, onTopNavClick: this.handleTopNavClick, darkStatus: this.state.dark })
 	        ),
 	        thingToDisplay
