@@ -1,4 +1,5 @@
 import React from 'react';
+import BenHoverButton from './BenHoverButton'
 import { Button, Position, Toaster } from "@blueprintjs/core";
 
 import '../assets/@blueprintjs/core';
@@ -10,20 +11,24 @@ export default class NavBarTop extends React.Component {
     const toaster = Toaster.create()
 
     this.state = {
-      toaster: toaster
+      toaster: toaster,
+      darkButtonClasses: "pt-button pt-minimal pt-icon-moon",
+      lightButtonClasses: "pt-button pt-minimal pt-icon-lightbulb",
+      darkClass: "pt-dark"
     }
 
     this.handleNavButtonClick = this.handleNavButtonClick.bind(this)
+
     this.darkToast = this.darkToast.bind(this)
     this.lightToast = this.lightToast.bind(this)
 
   }
 
-
   darkToast() {
     var message = "Dark Mode!";
 
-    this.state.toaster.show({ message: message,
+    this.state.toaster.show({ 
+      message: message,
       canEscapeKeyClear: true})
   }
 
@@ -31,14 +36,14 @@ export default class NavBarTop extends React.Component {
 
     var message = "Light Mode!";
 
-    this.state.toaster.show({ message: message,
+    this.state.toaster.show({ 
+      message: message,
       className: 'pt-dark',
       canEscapeKeyClear: true })    
   }
 
   handleNavButtonClick(e) {
   	e.preventDefault()
-
   	var newView = e.target.getAttribute("name")
 
     if(newView==='dark') {
@@ -59,21 +64,22 @@ export default class NavBarTop extends React.Component {
   }
 
 
+
   render() {
-      var darkClass = ""
-      var darkIcon = "pt-icon-lightbulb"
-    if(this.props.darkStatus === true) {
-      darkClass = "pt-dark"
-      darkIcon = "pt-icon-moon"
+    var classes = ""
+    var darkClass = ""
+    if(this.props.darkStatus===true) {
+      classes = this.state.darkButtonClasses
+      darkClass = this.state.darkClass
+    } else {
+      classes = this.state.lightButtonClasses
     }
 
 
     return (
       	<nav className={"pt-navbar pt-fixed-top " + darkClass}>
       		<div className="pt-navbar-group pt-align-left">
-      			<button name="home" style={this.props.topNavStyles.home} onClick={this.handleNavButtonClick} className="pt-navbar-heading pt-button pt-minimal">
-      				Ben Goldstein
-      			</button>
+            <BenHoverButton onNavButtonClick={this.handleNavButtonClick} topNavStyles={this.props.topNavStyles} />
       		</div>
       		<div className="pt-navbar-group pt-align-right">
       			<button name="contact" style={this.props.topNavStyles.contact} onClick={this.handleNavButtonClick} className="pt-button pt-minimal">
@@ -86,7 +92,9 @@ export default class NavBarTop extends React.Component {
       			Music
       			</button>
             <span>
-        			<Button name="dark" onClick={this.handleNavButtonClick} className={"pt-button pt-minimal " + darkIcon}>
+        			<Button name="dark" onClick={this.handleNavButtonClick} ref={
+                    (el) => this._dark = el
+                    } className={classes}>
         			</Button>
             </span>
       		</div>
