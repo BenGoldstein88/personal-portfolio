@@ -1,14 +1,16 @@
 import React from 'react';
-import NavBarTop from './NavBarTop'
-import HomePage from './HomePage'
-import ContactPage from './ContactPage'
-import ProjectsPage from './ProjectsPage'
-import MusicPage from './MusicPage'
+import NavBarTop from './NavBarTop';
+import HomePage from './HomePage';
+import ContactPage from './ContactPage';
+import ProjectsPage from './ProjectsPage';
+import MusicPage from './MusicPage';
+import {FocusStyleManager} from '@blueprintjs/core';
 
 export default class Home extends React.Component {
 
   constructor(props) {
     super(props);
+    FocusStyleManager.onlyShowFocusOnTabs();
 
     this.state={
       currentView: 'home',

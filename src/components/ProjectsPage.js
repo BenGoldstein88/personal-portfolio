@@ -1,6 +1,7 @@
 import React from 'react';
 import AWikiInTimeCard from './AWikiInTimeCard'
 import BookiCard from './BookiCard'
+import PoggleCard from './PoggleCard';
 export default class ProjectsPage extends React.Component {
 
   constructor(props) {
@@ -19,6 +20,7 @@ export default class ProjectsPage extends React.Component {
       	height: '100%',
       	marginTop: '60px'
       }} className={" " + darkClass}>
+        <PoggleCard />
       	<AWikiInTimeCard />
         <BookiCard />
 

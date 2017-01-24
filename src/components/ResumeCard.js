@@ -12,15 +12,7 @@ export default class ResumeCard extends React.Component {
 
 render() {
     return (
-      <div className="pt-card pt-elevation-2 pt-interactive" style={{
-      	height: '300px',
-      	width: '80%',
-      	margin: '0 auto',
-        textAlign: 'center',
-        marginTop: '15%',
-        textOverflow: 'ellipsis',
-        padding: '5%' 
-      }} onClick={this.handleCardClick}>
+      <div className="pt-card pt-elevation-2 pt-interactive resume-card" style={{borderRadius: '15%'}} onClick={this.handleCardClick}>
       	<h1> Resumé </h1>
       	<p style={{
       		marginTop: '15%'

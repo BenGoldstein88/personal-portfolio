@@ -82,13 +82,13 @@ export default class NavBarTop extends React.Component {
             <BenHoverButton onNavButtonClick={this.handleNavButtonClick} topNavStyles={this.props.topNavStyles} />
       		</div>
       		<div className="pt-navbar-group pt-align-right">
-      			<button name="contact" style={this.props.topNavStyles.contact} onClick={this.handleNavButtonClick} className="pt-button pt-minimal">
+      			<button name="contact" style={this.props.topNavStyles.contact} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
       			Contact
       			</button>
-      			<button name="projects" style={this.props.topNavStyles.projects} onClick={this.handleNavButtonClick} className="pt-button pt-minimal">
+      			<button name="projects" style={this.props.topNavStyles.projects} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
       			Projects
       			</button>
-      			<button name="music" style={this.props.topNavStyles.music} onClick={this.handleNavButtonClick} className="pt-button pt-minimal">
+      			<button name="music" style={this.props.topNavStyles.music} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
       			Music
       			</button>
             <span>

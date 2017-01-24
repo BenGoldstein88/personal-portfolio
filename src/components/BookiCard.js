@@ -16,15 +16,7 @@ export default class BookiCard extends React.Component {
 
 render() {
     return (
-      <div className="pt-card pt-elevation-2 pt-interactive" style={{
-      	height: '300px',
-      	width: '80%',
-      	margin: '0 auto',
-        textAlign: 'center',
-        marginTop: '10%',
-        textOverflow: 'ellipsis',
-        padding: '5%' 
-      }} onClick={this.handleCardClick}>
+      <div className="pt-card pt-elevation-2 pt-interactive project-card booki-card" style={{borderRadius: '15%'}}  onClick={this.handleCardClick}>
       	<h1> Booki </h1>
         <p style={{textOverflow: 'ellipsis'}}>
           A sports betting app that lets you view upcoming games and propose prop bets for acceptance by any registered friends. All payment processing is handled through Stripe, and winnnings are automatically paid to your debit-card/bank-account upon game completion. Full stats are available before and after all games. Personally, I handled all of the Stripe/Payment processing and interface as well as securing and consuming the statistics API.

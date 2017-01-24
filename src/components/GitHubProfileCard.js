@@ -21,13 +21,10 @@ export default class GitHubProfileCard extends React.Component {
     return (
     	
       <div style={{
-        width: '80%',
-        margin: '0 auto',
-        marginTop: '10%',
-        textAlign: 'center'
-      }} onClick={this.handleCLick} className={"pt-card pt-elevation-2 pt-interactive" + darkClass} >
-      	<img src={"../assets/png/octocat.png"} />
+        borderRadius: '15%'
+      }} onClick={this.handleCLick} className={"pt-card pt-elevation-2 pt-interactive home-card github-card" + darkClass} >
       </div>
     );
   }
 }
+      	// <img src={"../assets/png/octocat.png"} />

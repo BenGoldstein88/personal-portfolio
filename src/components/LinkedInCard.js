@@ -23,11 +23,8 @@ export default class LinkedInCard extends React.Component {
     return (
     	
       <div style={{
-        width: '80%',
-        margin: '0 auto',
-        marginTop: '10%',
-        textAlign: 'center'
-      }} onClick={this.handleCLick} className={"pt-card pt-elevation-2 pt-interactive" + darkClass} >
+        borderRadius: '15%'
+      }} onClick={this.handleCLick} className={"home-card linkedin-card pt-card pt-elevation-2 pt-interactive" + darkClass} >
       	<img style={{margin: '0 auto', width: '80%'}} src={imgURL} />
       </div>
     );

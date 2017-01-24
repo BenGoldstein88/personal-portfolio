@@ -1,0 +1,102 @@
+* {
+	font-family: 'Overpass Mono', monospace;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+}
+
+.navbar-button {
+	font-size: 1em;
+	transition: font-size .7s, font-weight: .7s;
+	-webkit-transition: font-size .7s, font-weight .7s;
+}
+
+.navbar-button:hover {
+	font-size: 2em;
+	font-weight: bold;
+	transition: font-size: .7s, font-weight .7s;
+	-webkit-transition: font-size .7s, font-weight .7s;	
+}
+
+.ben-home-button {
+	font-size: 1em;
+	transition: font-size .7s, font-weight: .7s;
+	-webkit-transition: font-size .7s, font-weight .7s;
+
+}
+
+.ben-home-button:hover {
+	font-size: 2em;
+	font-weight: bold;
+	transition: font-size: .7s, font-weight .7s;
+	-webkit-transition: font-size .7s, font-weight .7s;
+
+
+}
+.home-card {
+	height: 20%;
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 2%;
+	text-align: center;
+	min-height: 100px;
+	transition: width 1s, height 1s;
+	-webkit-transition: width 1s, height 1s;
+}
+
+.home-card:hover {
+	height: 25%;
+	width: 700px;
+	transition: width 1s, height 1s;
+	-webkit-transition: width 1s, height 1s;
+}
+
+.linkedin-card {
+}
+
+.github-card {
+	background-image: url('/assets/png/octocat.png');
+	background-size: cover;
+	min-height: 500px;
+
+}
+
+.project-card {
+	height: 300px;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 7.5%;
+	text-overflow: ellipsis;
+	padding: 5%;
+	/*border: 1px solid green;*/
+	
+}
+
+.resume-card {
+	height: 300px;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20%;
+	text-overflow: ellipsis;
+	padding: 5%;
+	/*border: 1px solid green;*/	
+}
+.wiki-card {
+
+}
+
+.poggle-card {
+
+}
+
+.booki-card {
+
+}
