@@ -19,7 +19,7 @@ export default class ContactPage extends React.Component {
       	height: '100%',
       	marginTop: '60px'
       }} className={" " + darkClass}>
-      	<ResumeCard />
+      	<ResumeCard darkStatus={this.props.darkStatus}/>
       </div>
     );
   }

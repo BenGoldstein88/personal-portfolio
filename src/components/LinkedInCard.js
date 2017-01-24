@@ -14,18 +14,19 @@ export default class LinkedInCard extends React.Component {
   }
 
   render() {
-  	var darkClass = ""
+  	var darkClass = " light-class "
   	var imgURL = "../assets/png/linkedin.png"
     if(this.props.darkStatus===true) {
-      darkClass = " pt-dark";
+      darkClass = " dark-class";
       imgURL = '../assets/png/linkedindark.png'
     }
+
     return (
     	
       <div style={{
         borderRadius: '15%'
-      }} onClick={this.handleCLick} className={"home-card linkedin-card pt-card pt-elevation-2 pt-interactive" + darkClass} >
-      	<img style={{margin: '0 auto', width: '80%'}} src={imgURL} />
+      }} onClick={this.handleCLick} className={" pt-elevation-2 pt-interactive home-card linkedin-card " + darkClass} >
+      	<img className={'linkedin-image'} src={imgURL} />
       </div>
     );
   }

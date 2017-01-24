@@ -11,7 +11,7 @@ export default class ProjectsPage extends React.Component {
   render() {
     var darkClass = ""
     if(this.props.darkStatus===true) {
-      darkClass = "pt-dark"
+      darkClass = " pt-dark "
     }
     
     return (
@@ -20,9 +20,9 @@ export default class ProjectsPage extends React.Component {
       	height: '100%',
       	marginTop: '60px'
       }} className={" " + darkClass}>
-        <PoggleCard />
-      	<AWikiInTimeCard />
-        <BookiCard />
+        <PoggleCard darkStatus={this.props.darkStatus}/>
+      	<AWikiInTimeCard darkStatus={this.props.darkStatus}/>
+        <BookiCard darkStatus={this.props.darkStatus}/>
 
       </div>
     );

@@ -41,7 +41,7 @@ export default class BenHoverButton extends React.Component {
 		var style = Object.assign({}, this.props.topNavStyles.home, this.state.style)
 		return (
 			<div >
-			<button name="home" style={style} onClick={this.props.onNavButtonClick} className="ben-home-button pt-navbar-heading pt-button pt-minimal">
+			<button name="home" style={style} onClick={this.props.onNavButtonClick} className="navbar-button pt-navbar-heading pt-button pt-minimal">
 			Ben Goldstein
 			</button>
 			</div>

@@ -14,15 +14,15 @@ export default class GitHubProfileCard extends React.Component {
   }
 
   render() {
-  	var darkClass = ""
+  	var darkClass = " light-class "
     if(this.props.darkStatus===true) {
-      darkClass = " pt-dark"
+      darkClass = " dark-class"
     }
     return (
     	
       <div style={{
         borderRadius: '15%'
-      }} onClick={this.handleCLick} className={"pt-card pt-elevation-2 pt-interactive home-card github-card" + darkClass} >
+      }} onClick={this.handleCLick} className={" pt-elevation-2 pt-interactive home-card github-card" + darkClass} >
       </div>
     );
   }
