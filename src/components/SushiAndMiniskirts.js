@@ -19,30 +19,25 @@ export default class SushiAndMiniskirts extends React.Component {
   render() {
 
     var loadingStyle = {
-        margin: '0 auto',
-        width: '50%',
-        marginTop: '10%',
-        height: '120px'
+        // margin: '0 auto',
+        // width: '50%',
+        // marginTop: '10%'
+        // height: '120px'
       }
 
     if(this.state.loading===true){
       loadingStyle = {
-        margin: '0 auto',
-        width: '50%',
-        height: '120px',
-        marginTop: '10%',
+        // margin: '0 auto',
+        // width: '50%',
+        // height: '120px',
+        // marginTop: '10%',
         background: "url('../assets/svg/balls2.svg') center center no-repeat"
       }
     }
 
     return (
-      <div style={loadingStyle}>
-        <iframe onLoad={this.handleLoading} style={{
-          border: '0',
-          width: '100%',
-          height: '800px',
-          align: 'center'          }
-        } src="https://bandcamp.com/EmbeddedPlayer/album=1425601790/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://bengoldstein.bandcamp.com/album/sushi-miniskirts">Sushi &amp; Miniskirts by Ben Goldstein</a>
+      <div className={'sushi-player-wrapper'} style={loadingStyle}>
+        <iframe onLoad={this.handleLoading} className={'sushi-player'} src="https://bandcamp.com/EmbeddedPlayer/album=1425601790/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://bengoldstein.bandcamp.com/album/sushi-miniskirts">Sushi &amp; Miniskirts by Ben Goldstein</a>
         </iframe>
       </div>
       );

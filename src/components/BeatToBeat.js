@@ -20,21 +20,16 @@ export default class BeatToBeat extends React.Component {
   render() {
 
     var loadingStyle = {
-        margin: '0 auto',
-        width: '50%',
-        height: '120px'
+
       }
 
     if(this.state.loading===true){
       loadingStyle = {
-        margin: '0 auto',
-        width: '50%',
-        height: '120px',
         background: "url('../assets/svg/balls1.svg') center center no-repeat"
       }
     }
     return (
-      <div style={loadingStyle}>
+      <div className={'small-music-player-wrapper'} style={loadingStyle}>
 
       	<iframe onLoad={this.handleLoading} style={{
       		border: '0',

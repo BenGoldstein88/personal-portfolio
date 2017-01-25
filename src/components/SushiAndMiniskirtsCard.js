@@ -8,17 +8,12 @@ export default class SushiAndMiniskirtsCard extends React.Component {
   }
 
   render() {
-  	var darkClass = ""
+  	var darkClass = " light-class "
     if(this.props.darkStatus===true) {
-      darkClass = " pt-dark"
+      darkClass = " dark-class"
     }
     return (
-      <div className={"pt-card pt-elevation-2 pt-interactive" + darkClass} style={{
-      		margin: '0 auto',
-      		marginTop: '15%',
-      		width: '80%',
-          height: '1000px'
-  }} >
+      <div className={"music-card sushi-and-miniskirts-card pt-elevation-2 pt-interactive" + darkClass} >
       	<SushiAndMiniskirts />
       </div>
     );

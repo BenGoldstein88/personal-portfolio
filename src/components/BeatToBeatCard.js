@@ -8,16 +8,12 @@ export default class BeatToBeatCard extends React.Component {
   }
 
   render() {
-  	var darkClass = ""
+  	var darkClass = " light-class "
     if(this.props.darkStatus===true) {
-      darkClass = " pt-dark"
+      darkClass = " dark-class "
     }
     return (
-      <div className={"pt-card pt-elevation-2 pt-interactive" + darkClass} style={{
-      		margin: '0 auto',
-      		marginTop: '15%',
-      		width: '80%'
-  }}>
+      <div className={"music-card beat-to-beat-card pt-elevation-2 pt-interactive" + darkClass} >
       	<BeatToBeat />
       </div>
     );

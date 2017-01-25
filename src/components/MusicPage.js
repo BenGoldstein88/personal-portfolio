@@ -1,7 +1,8 @@
 import React from 'react';
 import StoneCountryCard from './StoneCountryCard';
-import BeatToBeatCard from './BeatToBeatCard'
-import SushiAndMiniskirtsCard from './SushiAndMiniskirtsCard'
+import BeatToBeatCard from './BeatToBeatCard';
+import SushiAndMiniskirtsCard from './SushiAndMiniskirtsCard';
+import ShedALittleLightCard from './ShedALittleLightCard';
 
 export default class MusicPage extends React.Component {
 
@@ -23,9 +24,10 @@ export default class MusicPage extends React.Component {
         marginTop: '55px',
         textAlign: 'center'
       }} className={" " + darkClass} >
+        <ShedALittleLightCard darkStatus={this.props.darkStatus} />
         <StoneCountryCard darkStatus={this.props.darkStatus} />
-        <BeatToBeatCard darkStatus={this.props.darkStatus}/>
-        <SushiAndMiniskirtsCard darkStatus={this.props.darkStatus}/>
+        <BeatToBeatCard darkStatus={this.props.darkStatus} />
+        <SushiAndMiniskirtsCard darkStatus={this.props.darkStatus} />
       </div>
       );
   }
