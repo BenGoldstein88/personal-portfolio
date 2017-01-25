@@ -17,16 +17,16 @@ export default class ProjectsPage extends React.Component {
     
     return (
       <div style={{
-      	width: '100%',
-      	height: '100%',
-      	marginTop: '60px'
+        width: '100%',
+        height: '100%',
+        marginTop: '60px'
       }} className={" " + darkClass}>
         <PoggleCard darkStatus={this.props.darkStatus}/>
         <AWikiInTimeCard darkStatus={this.props.darkStatus}/>
         <BookiCard darkStatus={this.props.darkStatus}/>
-        <HangmanCard darkStatus={this.props.darkStatus} />
 
       </div>
     );
   }
 }
+        // <HangmanCard darkStatus={this.props.darkStatus} />
