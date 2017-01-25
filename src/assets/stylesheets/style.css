@@ -9,8 +9,8 @@
 }
 
 body {
-	min-width: 500px;
-}
+/*	min-width: 500px;
+*/}
 
 .navbar-top {
 	min-width: 500px;
@@ -70,8 +70,8 @@ body {
 	width: 70%;
 	height: 20%;
 	padding: 1%;
-	-webkit-transition: width 1s, height 1s;
-	transition: width 1s, height 1s;
+	-webkit-transition: width 1s, height 1s, background-color .7s;
+	transition: width 1s, height 1s, background-color .7s;
 	margin: 0 auto;
 	margin-top: 2%;
 	text-align: center;
@@ -118,13 +118,13 @@ body {
 	min-width: 200px;
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 7.5%;
+	margin-top: 5%;
 	text-overflow: ellipsis;
 	padding: 5%;
 	font-size: 1em;
 	font-weight: normal;
-	transition: font-size .5s, font-weight: .5s;
-	-webkit-transition: font-size .5s, font-weight .5s;
+	transition: font-size .5s, font-weight: .5s, background-color .7s;
+	-webkit-transition: font-size .5s, font-weight .5s, background-color .7s;
 	/*border: 1px solid green;*/
 	
 }
@@ -137,20 +137,35 @@ body {
 
 }
 
-.resume-card {
-	font-size: 1em;
-	font-weight: normal;
-	-webkit-transition: font-size .5s, font-weight .5s;
-	transition: font-size .5s, font-weight .5s;
+.project-card h1 {
+	color: black;
+	transition: color 1s;
+	-webkit-transition: color 1s;
+}
 
-	height: 300px;
+.project-card:hover h1 {
+	color: green;
+	transition: color 1s;
+	-webkit-transition: color 1s;
+}
+
+
+.resume-card {
+	height: 40%;
 	width: 80%;
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 20%;
 	text-overflow: ellipsis;
 	padding: 5%;
+	/*min-height: 400px;*/
+	font-size: 1em;
+	font-weight: normal;
+	-webkit-transition: font-size .5s, font-weight .5s, background-color .7s;
+	transition: font-size .5s, font-weight .5s, background-color .7s;
+
 }
+
 
 .resume-card:hover {
 
@@ -159,11 +174,24 @@ body {
 	-webkit-transition: font-size .5s, font-weight .5s;
 	transition: font-size .5s, font-weight .5s;
 }
+
+.resume-card h1 {
+	color: black;
+	transition: color 1s;
+	-webkit-transition: color 1s;
+}
+
+.resume-card:hover h1 {
+	color: blue;
+	transition: color 1s;
+	-webkit-transition: color 1s;
+}
 .wiki-card {
 
 }
 
 .poggle-card {
+	margin-top: 80px;
 
 }
 

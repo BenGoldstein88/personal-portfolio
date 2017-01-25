@@ -24,12 +24,15 @@ export default class NavBarTop extends React.Component {
 
   }
 
+
   darkToast() {
     var message = "Dark Mode!";
 
     this.state.toaster.show({ 
       message: message,
-      canEscapeKeyClear: true})
+      canEscapeKeyClear: true,
+      timeout: 1000
+    })
   }
 
   lightToast() {
@@ -39,7 +42,9 @@ export default class NavBarTop extends React.Component {
     this.state.toaster.show({ 
       message: message,
       className: 'pt-dark',
-      canEscapeKeyClear: true })    
+      canEscapeKeyClear: true,
+        timeout: 1000
+      })    
   }
 
   handleNavButtonClick(e) {
@@ -68,9 +73,17 @@ export default class NavBarTop extends React.Component {
   render() {
     var classes = ""
     var darkClass = ""
+    var topNavStyles = this.props.topNavStyles;
     if(this.props.darkStatus===true) {
       classes = this.state.darkButtonClasses
       darkClass = this.state.darkClass
+      topNavStyles = {
+        contact: {color: 'white'},
+        projects: {color: 'white'},
+        music: {color: 'white'},
+        home: {color: 'white'}
+      }
+      topNavStyles[this.props.currentView] = this.props.topNavStyles[this.props.currentView]
     } else {
       classes = this.state.lightButtonClasses
     }
@@ -79,16 +92,16 @@ export default class NavBarTop extends React.Component {
     return (
       	<nav className={"navbar-top pt-navbar pt-fixed-top " + darkClass}>
       		<div className="pt-navbar-group pt-align-left">
-            <BenHoverButton onNavButtonClick={this.handleNavButtonClick} topNavStyles={this.props.topNavStyles} />
+            <BenHoverButton onNavButtonClick={this.handleNavButtonClick} topNavStyles={topNavStyles} />
       		</div>
       		<div className="pt-navbar-group pt-align-right">
-      			<button name="contact" style={this.props.topNavStyles.contact} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
+      			<button name="contact" style={topNavStyles.contact} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
       			Contact
       			</button>
-      			<button name="projects" style={this.props.topNavStyles.projects} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
+      			<button name="projects" style={topNavStyles.projects} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
       			Projects
       			</button>
-      			<button name="music" style={this.props.topNavStyles.music} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
+      			<button name="music" style={topNavStyles.music} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
       			Music
       			</button>
             <span>

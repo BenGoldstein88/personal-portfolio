@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "847dbaacdac670dc2dae"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "968a6b5d53cb282c843c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -31719,7 +31719,7 @@
 	        projects: { color: "black" },
 	        music: { color: "black" }
 	      },
-	      dark: false
+	      dark: true
 	    };
 
 	    _this.resetStyleState = _this.resetStyleState.bind(_this);
@@ -32195,7 +32195,9 @@
 
 	      this.state.toaster.show({
 	        message: message,
-	        canEscapeKeyClear: true });
+	        canEscapeKeyClear: true,
+	        timeout: 1000
+	      });
 	    }
 	  }, {
 	    key: 'lightToast',
@@ -32206,7 +32208,9 @@
 	      this.state.toaster.show({
 	        message: message,
 	        className: 'pt-dark',
-	        canEscapeKeyClear: true });
+	        canEscapeKeyClear: true,
+	        timeout: 1000
+	      });
 	    }
 	  }, {
 	    key: 'handleNavButtonClick',
@@ -32235,9 +32239,17 @@
 
 	      var classes = "";
 	      var darkClass = "";
+	      var topNavStyles = this.props.topNavStyles;
 	      if (this.props.darkStatus === true) {
 	        classes = this.state.darkButtonClasses;
 	        darkClass = this.state.darkClass;
+	        topNavStyles = {
+	          contact: { color: 'white' },
+	          projects: { color: 'white' },
+	          music: { color: 'white' },
+	          home: { color: 'white' }
+	        };
+	        topNavStyles[this.props.currentView] = this.props.topNavStyles[this.props.currentView];
 	      } else {
 	        classes = this.state.lightButtonClasses;
 	      }
@@ -32248,24 +32260,24 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'pt-navbar-group pt-align-left' },
-	          _react2.default.createElement(_BenHoverButton2.default, { onNavButtonClick: this.handleNavButtonClick, topNavStyles: this.props.topNavStyles })
+	          _react2.default.createElement(_BenHoverButton2.default, { onNavButtonClick: this.handleNavButtonClick, topNavStyles: topNavStyles })
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'pt-navbar-group pt-align-right' },
 	          _react2.default.createElement(
 	            'button',
-	            { name: 'contact', style: this.props.topNavStyles.contact, onClick: this.handleNavButtonClick, className: "pt-button pt-minimal navbar-button " + darkClass },
+	            { name: 'contact', style: topNavStyles.contact, onClick: this.handleNavButtonClick, className: "pt-button pt-minimal navbar-button " + darkClass },
 	            'Contact'
 	          ),
 	          _react2.default.createElement(
 	            'button',
-	            { name: 'projects', style: this.props.topNavStyles.projects, onClick: this.handleNavButtonClick, className: "pt-button pt-minimal navbar-button " + darkClass },
+	            { name: 'projects', style: topNavStyles.projects, onClick: this.handleNavButtonClick, className: "pt-button pt-minimal navbar-button " + darkClass },
 	            'Projects'
 	          ),
 	          _react2.default.createElement(
 	            'button',
-	            { name: 'music', style: this.props.topNavStyles.music, onClick: this.handleNavButtonClick, className: "pt-button pt-minimal navbar-button " + darkClass },
+	            { name: 'music', style: topNavStyles.music, onClick: this.handleNavButtonClick, className: "pt-button pt-minimal navbar-button " + darkClass },
 	            'Music'
 	          ),
 	          _react2.default.createElement(
@@ -32335,7 +32347,7 @@
 
 	      return _react2.default.createElement(
 	        "div",
-	        { onClick: this.handleClick, className: 'project-card project-card-effect poggle-card pt-interactive pt-elevation-2' + darkClass, style: { borderRadius: '15%' } },
+	        { onClick: this.handleClick, className: 'project-card poggle-card pt-interactive pt-elevation-2' + darkClass, style: { borderRadius: '15%' } },
 	        _react2.default.createElement(
 	          "h1",
 	          null,
@@ -32474,7 +32486,7 @@
 	      }
 	      return _react2.default.createElement(
 	        'div',
-	        { className: " pt-elevation-2 pt-interactive resume-card" + darkClass, style: { borderRadius: '15%' }, onClick: this.handleCardClick },
+	        { className: " pt-elevation-2 pt-interactive resume-card " + darkClass, style: { borderRadius: '15%' }, onClick: this.handleCardClick },
 	        _react2.default.createElement(
 	          'h1',
 	          null,

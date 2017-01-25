@@ -20,7 +20,7 @@ export default class Home extends React.Component {
         projects: {color: "black"},
         music: {color: "black"}
       },
-      dark: false
+      dark: true
     }
 
     this.resetStyleState = this.resetStyleState.bind(this)

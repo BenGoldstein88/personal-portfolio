@@ -19,7 +19,7 @@ export default class PoggleCard extends React.Component {
     }
 
     return (
-      <div onClick={this.handleClick} className={'project-card project-card-effect poggle-card pt-interactive pt-elevation-2' + darkClass} style={{borderRadius: '15%'}}>
+      <div onClick={this.handleClick} className={'project-card poggle-card pt-interactive pt-elevation-2' + darkClass} style={{borderRadius: '15%'}}>
       	<h1> Poggle </h1>
         <p className={' project-description '} >
           An online word game not dissimilar to Boggle&trade; built entirely by yours truly. Currently hosted by Heroku.
