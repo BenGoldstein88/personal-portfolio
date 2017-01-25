@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5b21f6475556bd01fa63"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "847dbaacdac670dc2dae"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -30914,7 +30914,7 @@
 	        "div",
 	        { style: {
 	            borderRadius: '15%'
-	          }, onClick: this.handleCLick, className: " pt-elevation-2 pt-interactive home-card" + darkClass },
+	          }, onClick: this.handleCLick, className: " pt-elevation-2 pt-interactive home-card bandcamp-card " + darkClass },
 	        _react2.default.createElement("img", { style: { margin: '0 auto', width: '80%' }, src: imgURL })
 	      );
 	    }
@@ -31640,16 +31640,18 @@
 	      if (this.props.darkStatus === true) {
 	        darkClass = " dark-class";
 	      }
-	      return _react2.default.createElement("div", { style: {
-	          borderRadius: '15%'
-	        }, onClick: this.handleCLick, className: " pt-elevation-2 pt-interactive home-card github-card" + darkClass });
+	      return _react2.default.createElement(
+	        "div",
+	        { style: {
+	            borderRadius: '15%'
+	          }, onClick: this.handleCLick, className: " pt-elevation-2 pt-interactive home-card github-card" + darkClass },
+	        _react2.default.createElement("img", { className: 'github-image', src: "../assets/png/octocat.png" })
+	      );
 	    }
 	  }]);
 
 	  return GitHubProfileCard;
 	}(_react2.default.Component);
-	// <img src={"../assets/png/octocat.png"} />
-
 
 	exports.default = GitHubProfileCard;
 
@@ -32242,7 +32244,7 @@
 
 	      return _react2.default.createElement(
 	        'nav',
-	        { className: "pt-navbar pt-fixed-top " + darkClass },
+	        { className: "navbar-top pt-navbar pt-fixed-top " + darkClass },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'pt-navbar-group pt-align-left' },
