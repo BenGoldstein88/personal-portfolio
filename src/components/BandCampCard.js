@@ -24,7 +24,7 @@ export default class BandCampCard extends React.Component {
     	
       <div style={{
         borderRadius: '15%'
-      }} onClick={this.handleCLick} className={" pt-elevation-2 pt-interactive home-card" + darkClass} >
+      }} onClick={this.handleCLick} className={" pt-elevation-2 pt-interactive home-card bandcamp-card " + darkClass} >
       	<img style={{margin: '0 auto', width: '80%'}}src={imgURL} />
       </div>
     );

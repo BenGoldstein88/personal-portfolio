@@ -8,6 +8,14 @@
     user-select: none;
 }
 
+body {
+	min-width: 500px;
+}
+
+.navbar-top {
+	min-width: 500px;
+}
+
 
 .navbar-button {
 	font-size: 1em;
@@ -59,40 +67,55 @@
 
 
 .home-card {
-	width: 600px;
+	width: 70%;
 	height: 20%;
 	padding: 1%;
-	-webkit-transition: width 1s;
-	transition: width 1s;
+	-webkit-transition: width 1s, height 1s;
+	transition: width 1s, height 1s;
 	margin: 0 auto;
 	margin-top: 2%;
 	text-align: center;
-	min-height: 100px; 
+	min-height: 100px;
+	min-width: 300px; 
+/*	max-width: 600px;
+	max-height: 140px;*/
 }
 
 .home-card:hover {
-	width: 650px;
+	width: 80%;
 	height: 23%;
-	-webkit-transition: width 1s;
-	transition: width 1s;
+	-webkit-transition: width 1s, height 1s;
+	transition: width 1s, height 1s;
 }
 
 .linkedin-card {
+	padding: 3%;
 
+}
+
+.bandcamp-card {
+	padding-top: 2%;
 }
 
 
 .github-card {
-	background-image: url('/assets/png/octocat.png');
-	background-size: cover;
-	min-height: 500px;
+/*	background-image: url('/assets/png/octocat.png');
+	background-size: cover;*/
+	min-height: 266px;
+	max-height: 600px;
 
+
+}
+
+.github-image {
+	height: 90%;
+	width: 90%;
 }
 
 .project-card {
 	height: 300px;
 	width: 80%;
-	min-width: 400px;
+	min-width: 200px;
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 7.5%;
@@ -100,8 +123,8 @@
 	padding: 5%;
 	font-size: 1em;
 	font-weight: normal;
-	transition: font-size .7s, font-weight: .7s;
-	-webkit-transition: font-size .7s, font-weight .7s;
+	transition: font-size .5s, font-weight: .5s;
+	-webkit-transition: font-size .5s, font-weight .5s;
 	/*border: 1px solid green;*/
 	
 }
@@ -109,16 +132,16 @@
 .project-card:hover {
 	font-size: 1.7em;
 	font-weight: bold;
-	transition: font-size: .7s, font-weight .7s;
-	-webkit-transition: font-size .7s, font-weight .7s;	
+	transition: font-size: .5s, font-weight .5s;
+	-webkit-transition: font-size .5s, font-weight .5s;	
 
 }
 
 .resume-card {
 	font-size: 1em;
 	font-weight: normal;
-	-webkit-transition: font-size .7s, font-weight .7s;
-	transition: font-size .7s, font-weight .7s;
+	-webkit-transition: font-size .5s, font-weight .5s;
+	transition: font-size .5s, font-weight .5s;
 
 	height: 300px;
 	width: 80%;
@@ -133,8 +156,8 @@
 
 	font-size: 1.5em;
 	font-weight: bold;
-	-webkit-transition: font-size .7s, font-weight .7s;
-	transition: font-size .7s, font-weight .7s;
+	-webkit-transition: font-size .5s, font-weight .5s;
+	transition: font-size .5s, font-weight .5s;
 }
 .wiki-card {
 

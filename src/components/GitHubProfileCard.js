@@ -23,8 +23,8 @@ export default class GitHubProfileCard extends React.Component {
       <div style={{
         borderRadius: '15%'
       }} onClick={this.handleCLick} className={" pt-elevation-2 pt-interactive home-card github-card" + darkClass} >
+      	 <img className={'github-image'} src={"../assets/png/octocat.png"} />
       </div>
     );
   }
 }
-      	// <img src={"../assets/png/octocat.png"} />

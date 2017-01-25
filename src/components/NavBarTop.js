@@ -77,7 +77,7 @@ export default class NavBarTop extends React.Component {
 
 
     return (
-      	<nav className={"pt-navbar pt-fixed-top " + darkClass}>
+      	<nav className={"navbar-top pt-navbar pt-fixed-top " + darkClass}>
       		<div className="pt-navbar-group pt-align-left">
             <BenHoverButton onNavButtonClick={this.handleNavButtonClick} topNavStyles={this.props.topNavStyles} />
       		</div>
