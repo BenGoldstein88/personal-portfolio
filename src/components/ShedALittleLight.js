@@ -30,7 +30,7 @@ constructor(props) {
 
     if(this.state.loading===true){
       loadingStyle = {
-        background: "url('../assets/svg/balls.svg') center center no-repeat"
+        background: "url('../assets/svg/balls2.svg') center center no-repeat"
       }
     }
     return (

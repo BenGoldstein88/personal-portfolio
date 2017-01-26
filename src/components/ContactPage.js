@@ -1,5 +1,6 @@
 import React from 'react';
-import ResumeCard from './ResumeCard'
+import ResumeCard from './ResumeCard';
+import ResumeSVG from './ResumeSVG';
 export default class ContactPage extends React.Component {
   
   constructor(props) {
@@ -20,6 +21,7 @@ export default class ContactPage extends React.Component {
       	marginTop: '60px'
       }} className={" " + darkClass}>
       	<ResumeCard darkStatus={this.props.darkStatus}/>
+        <ResumeSVG />
       </div>
     );
   }
