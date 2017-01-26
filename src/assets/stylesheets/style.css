@@ -333,6 +333,26 @@ body {
 
 }
 
+.resume-wrapper {
+	font-size: 1em;
+	font-weight: normal;
+	stroke-dasharray: 4000 4000;
+	stroke-dashoffset: 4000;
+	-webkit-transition: font-size .5s, font-weight .5s, background-color .7s, opacity .5s;
+	transition: font-size .5s, font-weight .5s, background-color .7s, opacity .5s;
+
+}
+
+.resume-wrapper:hover {
+
+	font-size: 1.5em;
+	font-weight: bold;
+	opacity: .95;
+	stroke-dasharray: 0 0;
+	-webkit-transition: font-size .5s, font-weight .5s, opacity .5s;
+	transition: font-size .5s, font-weight .5s, opacity .5s;
+}
+
 
 .resume-card {
 	height: 40%;
@@ -346,34 +366,21 @@ body {
 	text-overflow: ellipsis;
 	padding: 5%;
 	/*min-height: 400px;*/
-	font-size: 1em;
-	font-weight: normal;
-	-webkit-transition: font-size .5s, font-weight .5s, background-color .7s, opacity .5s;
-	transition: font-size .5s, font-weight .5s, background-color .7s, opacity .5s;
+
 
 	/*pointer-events: none;*/
 }
 
-
-.resume-card:hover {
-
-/*	font-size: 1.5em;
-	font-weight: bold;*/
-/*	opacity: .95;
-	-webkit-transition: font-size .5s, font-weight .5s, opacity .5s;
-	transition: font-size .5s, font-weight .5s, opacity .5s;*/
-}
-
-.resume-card h1 {
+.resume-wrapper h1 {
 	color: black;
 	transition: color 1s;
 	-webkit-transition: color 1s;
 }
 
-.resume-card:hover h1 {
-/*	color: blue;
+.resume-wrapper:hover h1 {
+	color: darkblue;
 	transition: color 1s;
-	-webkit-transition: color 1s;*/
+	-webkit-transition: color 1s;
 }
 .wiki-card {
 
@@ -419,23 +426,15 @@ body {
 	width: 100%;
 	height: 100%;
 	/*background-color: rgba(125, 188, 255, 0.6);*/
-	stroke-dasharray: 4000 4000;
+
 /*	transition: stroke-dasharray 2s;
 	-webkit-transition: stroke-dasharray 2s;	*/
 
-	stroke-dashoffset: 4000;
 /*	transition: stroke-dashoffset .5s;
 	-webkit-transition: stroke-dashoffset .5s;*/
 }
 
-.sample-svg:hover {
-	stroke-dasharray: 0 0;
-/*	transition: stroke-dasharray .2s;
-	-webkit-transition: stroke-dasharray .2s;*/
-/*	stroke-dashoffset: 0;
-	transition: stroke-dashoffset .5s;
-	-webkit-transition: stroke-dashoffset .5s;	*/
-}
+
 .sample-svg-rect {
 	margin: 0 auto;
 	width: 100%;
@@ -443,8 +442,8 @@ body {
 	stroke-width: 5;
 	stroke: blue;
 	fill-opacity: 0;
-	transition: stroke-dasharray 2s;
-	-webkit-transition: stroke-dasharray 2s;
+	transition: stroke-dasharray 2.25s;
+	-webkit-transition: stroke-dasharray 2.25s;
 
 
 }

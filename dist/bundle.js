@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0df815f3ab566877c87b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "19663356830a9166b4b1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -31576,8 +31576,12 @@
 	            height: '100%',
 	            marginTop: '60px'
 	          }, className: " " + darkClass },
-	        _react2.default.createElement(_ResumeCard2.default, { darkStatus: this.props.darkStatus }),
-	        _react2.default.createElement(_ResumeSVG2.default, null)
+	        _react2.default.createElement(
+	          'div',
+	          { className: ' resume-wrapper ' },
+	          _react2.default.createElement(_ResumeCard2.default, { darkStatus: this.props.darkStatus }),
+	          _react2.default.createElement(_ResumeSVG2.default, null)
+	        )
 	      );
 	    }
 	  }]);
@@ -32007,7 +32011,7 @@
 	          this.setState({
 	            currentView: 'contact',
 	            topNavStyles: {
-	              contact: { color: "blue" }
+	              contact: { color: "darkblue" }
 	            }
 	          });
 	          break;

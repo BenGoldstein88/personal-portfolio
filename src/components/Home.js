@@ -59,7 +59,7 @@ export default class Home extends React.Component {
         this.setState({
           currentView: 'contact',
           topNavStyles: {
-            contact: {color: "blue"}
+            contact: {color: "darkblue"}
           }
         })
         break;
