@@ -14,6 +14,9 @@ body {
 
 .navbar-top {
 	min-width: 500px;
+	transition: background-color .7s, color .7s;
+	-webkit-transition: background-color .7s, color .7s;
+
 }
 
 
@@ -25,7 +28,7 @@ body {
 }
 
 .navbar-button:hover {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	transition: font-size: .7s, font-weight .7s;
 	-webkit-transition: font-size .7s, font-weight .7s;	
@@ -218,6 +221,7 @@ body {
 }
 
 .project-card:hover {
+	overflow: auto;
 	font-size: 1.7em;
 	font-weight: bold;
 	transition: font-size: .5s, font-weight .5s;
@@ -344,6 +348,7 @@ body {
 }
 
 .resume-wrapper:hover {
+	overflow: auto;
 
 	font-size: 1.5em;
 	font-weight: bold;
