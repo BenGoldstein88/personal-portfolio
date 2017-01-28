@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import ContactPage from './ContactPage';
 import ProjectsPage from './ProjectsPage';
 import MusicPage from './MusicPage';
+import ChartMaker from './ChartMaker/ChartMaker';
 import {FocusStyleManager} from '@blueprintjs/core';
 
 export default class Home extends React.Component {
@@ -26,8 +27,6 @@ export default class Home extends React.Component {
     this.resetStyleState = this.resetStyleState.bind(this)
     this.handleTopNavClick = this.handleTopNavClick.bind(this)
 
-    document.body.style.backgroundColor = '#c6c9ce'
-
   }
 
   resetStyleState() {
@@ -35,8 +34,9 @@ export default class Home extends React.Component {
       topNavStyles: {
         home: {color: "black"},
         contact: {color: "black"},
-        loop: {color: "black"},
-        hunt: {color: "black"}
+        projects: {color: "black"},
+        music: {color: "black"},
+        chart: {color: "black"}
       }
 
     })
@@ -83,6 +83,16 @@ export default class Home extends React.Component {
           }
         })
         break;
+
+      case 'chart':
+        this.resetStyleState();
+        this.setState({
+          currentView: 'chart',
+          topNavStyles: {
+            chart: {color: "gold"}
+          }
+        })
+        break;
       case 'dark':
         var opposite = !this.state.dark
         this.setState({
@@ -101,17 +111,20 @@ export default class Home extends React.Component {
 
     switch(this.state.currentView) {
       case 'home':
-        thingToDisplay = <div style={{marginTop: "52px"}}> <HomePage darkStatus={this.state.dark} /> </div>
+        thingToDisplay = <div className={'main-page'} > <HomePage darkStatus={this.state.dark} /> </div>
         break;
       case 'contact':
-        thingToDisplay = <div style={{marginTop: "52px"}}> <ContactPage darkStatus={this.state.dark} /> </div>
+        thingToDisplay = <div className={'main-page'} > <ContactPage darkStatus={this.state.dark} /> </div>
         break;      
       case 'projects':
-        thingToDisplay = <div style={{marginTop: "52px"}}> <ProjectsPage darkStatus={this.state.dark} /> </div>
+        thingToDisplay = <div className={'main-page'} > <ProjectsPage darkStatus={this.state.dark} /> </div>
         break;
       case 'music':
-        thingToDisplay = <div style={{marginTop: "52px"}}> <MusicPage darkStatus={this.state.dark}/> </div>
+        thingToDisplay = <div className={'main-page'} > <MusicPage darkStatus={this.state.dark}/> </div>
         break;
+      case 'chart':
+        thingToDisplay = <div className={'main-page'} > <ChartMaker darkStatus={this.state.dark}/> </div>
+        break;      
       // case 'dark':
       //   break;
       default:
@@ -119,7 +132,7 @@ export default class Home extends React.Component {
     }
 
     return (
-      <div>
+      <div className={'home-component'}>
         <div>
           <NavBarTop currentView={this.state.currentView} topNavStyles={this.state.topNavStyles} onTopNavClick={this.handleTopNavClick} darkStatus={this.state.dark} />
         </div>

@@ -81,7 +81,8 @@ export default class NavBarTop extends React.Component {
         contact: {color: 'white'},
         projects: {color: 'white'},
         music: {color: 'white'},
-        home: {color: 'white'}
+        home: {color: 'white'},
+        chart: {color: 'white'}
       }
       topNavStyles[this.props.currentView] = this.props.topNavStyles[this.props.currentView]
     } else {
@@ -104,6 +105,9 @@ export default class NavBarTop extends React.Component {
       			<button name="music" style={topNavStyles.music} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
       			Music
       			</button>
+            <button name="chart" style={topNavStyles.chart} onClick={this.handleNavButtonClick} className={"pt-button pt-minimal navbar-button " + darkClass}>
+            ?
+            </button>
             <span>
         			<Button name="dark" onClick={this.handleNavButtonClick} ref={
                     (el) => this._dark = el

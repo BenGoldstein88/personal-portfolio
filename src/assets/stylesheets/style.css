@@ -9,8 +9,24 @@
 }
 
 body {
-/*	min-width: 500px;
-*/}
+	/*min-width: 500px;*/
+	background-color: #c6c9ce;
+	height: 100%;
+	width: 100%;
+	/*min-height: 1000px;*/
+
+}
+
+.home-component {
+	height: 100%;
+	width: 100%;
+}
+
+.main-page {
+	margin-top: 52px;
+	height: 100%;
+	width: 100%;
+}
 
 .navbar-top {
 	min-width: 500px;
@@ -23,15 +39,15 @@ body {
 .navbar-button {
 	font-size: 1em;
 	font-weight: normal;
-	transition: font-size .7s, font-weight: .7s;
-	-webkit-transition: font-size .7s, font-weight .7s;
+	transition: font-size .7s, font-weight: .7s, color .7s;
+	-webkit-transition: font-size .7s, font-weight .7s, color .7s;
 }
 
 .navbar-button:hover {
 	font-size: 1.5em;
 	font-weight: bold;
-	transition: font-size: .7s, font-weight .7s;
-	-webkit-transition: font-size .7s, font-weight .7s;	
+	transition: font-size: .7s, font-weight .7s, color .7s;
+	-webkit-transition: font-size .7s, font-weight .7s, color .7s;	
 }
 
 /*.ben-home-button {
@@ -120,7 +136,7 @@ body {
 .linkedin-image {}
 .bandcamp-image {}
 
-.linkedin-card:hover {
+/*.linkedin-card:hover {
     -webkit-animation-name: spin;
     -webkit-animation-duration: 250ms;
     -webkit-animation-iteration-count: 1;
@@ -138,7 +154,7 @@ body {
     animation-duration: 250ms;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-}
+}*/
 
 
 .bandcamp-card:hover {
@@ -295,7 +311,7 @@ body {
 .shed-a-little-light-card {
 	padding: 2%;
 	height: 15%;
-	margin-top: 7%;
+	margin-top: 80px;
 	transition: width .7s, background-color .7s;
 	-webkit-transition: width .7s, background-color .7s;
 
@@ -453,10 +469,56 @@ body {
 
 }
 
-/*.sample-svg-rect:hover {
-	stroke-dashoffset: 0;
-	transition: stroke-dashoffset 2s;
-	-webkit-transition: stroke-dashoffset 2s;
-}*/
+.add-section-button {}
+.beat {
+	color: darkblue;
+	height: 40px;
+	width: 40px;
+	border: 1px solid red;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+
+.beat-chord {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.clicked-beat {
+	background-color: pink;
+
+}
+
+.chord-input {
+	border: none;
+	height:95%;
+	width: 95%;
+	background-color: inherit;
+	text-align: center;
+	display: inline-block;
+}
+
+.chart-maker {
+	height: 100%;
+	width: 100%;
+	min-height: 800px;
+}
+.measure {
+	display: inline-block;
+	margin: 5px;
+}
+.measure-display {}
+.section {
+	display: block;
+	margin: 10px;
+}
+.section-display {}
+
+.section-name {}
+.section-name-wrapper {}
+.section-name-input {}
 
 
