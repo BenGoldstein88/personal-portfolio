@@ -2,6 +2,7 @@ import React from 'react';
 import Measure from './Measure';
 import MeasureDisplay from './MeasureDisplay';
 import SectionName from './SectionName';
+import AddMeasureButton from './AddMeasureButton';
 
 export default class Section extends React.Component {
 
@@ -16,6 +17,8 @@ export default class Section extends React.Component {
 
     this.populateMeasures = this.populateMeasures.bind(this);
     this.changeName = this.changeName.bind(this);
+    this.addMeasure = this.addMeasure.bind(this);
+    this.removeMeasure = this.removeMeasure.bind(this);
   }
 
   populateMeasures() {
@@ -32,6 +35,25 @@ export default class Section extends React.Component {
   	})
   }
 
+  addMeasure() {
+  	var measures = this.state.measures;
+  	measures.push(measures.length);
+  	this.setState({
+  		measures: measures
+  	})
+  }
+
+  removeMeasure(measureNumber) {
+  	var measures = this.state.measures;
+  	var clone = measures;
+  	clone.splice(measureNumber, 1);
+
+  	this.setState({
+  		measures: clone
+  	})
+
+  }
+
 
   componentWillMount() {
   	if(this.state.measures.length < 1) {
@@ -45,15 +67,16 @@ export default class Section extends React.Component {
   	var measuresToRender = [];
   	for(var i in measures) {
 
-		var measure = <Measure key={i} measureNumber={i} sectionNumber={this.props.sectionNumber} markAsSelected={this.props.markAsSelected} selectedBeatID={this.props.selectedBeatID} getSelectedBeatID={this.props.getSelectedBeatID}/>
+		var measure = <Measure key={i} measureNumber={i} sectionNumber={this.props.sectionNumber} markAsSelected={this.props.markAsSelected} selectedBeatID={this.props.selectedBeatID} getSelectedBeatID={this.props.getSelectedBeatID} removeMeasure={this.removeMeasure}/>
 		measuresToRender.push(measure);
 	}
 
  
     return (
       <div className={'section'}>
-      	<SectionName name={this.state.name} changeName={this.changeName}/>
+      	<SectionName name={this.state.name} changeName={this.changeName} sectionNumber={this.props.sectionNumber} selectedSectionNumber={this.props.selectedSectionNumber} markSectionAsSelected={this.props.markSectionAsSelected}/>
       	{measuresToRender}
+        <AddMeasureButton addMeasure={this.addMeasure}/>
       </div>
     );
   }

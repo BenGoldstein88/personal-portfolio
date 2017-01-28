@@ -6,41 +6,15 @@ export default class Beat extends React.Component {
     super(props);
 
     this.state = {
-    	chord: '',
-      clicked: false
+    	chord: ''
     }
 
     this.handleClick = this.handleClick.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getBeatID = this.getBeatID.bind(this);
-    this.resetClicked = this.resetClicked.bind(this);
   }
 
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   if(!this.state.clicked) {return null;}
-  //   var isSelected = this.props.getSelectedBeatID() === this.getBeatID();
-  //   if(isSelected && this.state.clicked) {return null;}
-  //   if(isSelected) {
-  //     this.setState({
-  //       clicked: true
-  //     })
-  //     return null;
-  //   } else {
-  //     this.setState({
-  //       clicked: false
-  //     })
-  //   }
-  
-    
-  // }
-
-  resetClicked() {
-    this.setState({
-      clicked: false
-    })
-  }
 
 
 
@@ -57,8 +31,7 @@ export default class Beat extends React.Component {
   handleClick(e) {
     // e.preventDefault();
     e.stopPropagation();
-    // console.log("this.getBeatID(): ", this.getBeatID());
-    // console.log("this.props.getSelectedBeatID(): ", this.props.getSelectedBeatID());
+
     this.props.markAsSelected(this.getBeatID());
 
   }
@@ -82,7 +55,6 @@ export default class Beat extends React.Component {
     var className = 'beat'
 
     if(this.props.selectedBeatID === this.getBeatID()) {
-      console.log('got clicked')
       className += ' clicked-beat';
       thingToDisplay = <input ref={'input'} className={'chord-input'} type={'text'} onKeyPress={this.handleKeyPress} placeholder={this.state.chord} autoFocus/>
     } 

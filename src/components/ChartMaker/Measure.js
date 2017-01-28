@@ -1,5 +1,6 @@
 import React from 'react';
 import Beat from './Beat';
+import MeasureContextMenu from './MeasureContextMenu';
 export default class Measure extends React.Component {
 
   constructor(props) {
@@ -7,8 +8,13 @@ export default class Measure extends React.Component {
 
     this.state = {
     	beats: [],
-    	beatsPerMeasure: 4
+    	beatsPerMeasure: 4,
+      context: false
     }
+
+    this.populateBeats = this.populateBeats.bind(this);
+    this.handleRightClick = this.handleRightClick.bind(this);
+    this.resetRightClick = this.resetRightClick.bind(this);
 
   }
 
@@ -32,6 +38,19 @@ export default class Measure extends React.Component {
     })
   }
 
+  handleRightClick(e) {
+    e.preventDefault();
+    this.setState({
+      context: !this.state.context
+    })
+  }
+
+  resetRightClick() {
+    this.setState({
+      context: false
+    })
+  }
+
 
 
   render() {
@@ -41,9 +60,14 @@ export default class Measure extends React.Component {
       var beat = <Beat key={i} beatNumber={i} measureNumber={this.props.measureNumber} sectionNumber={this.props.sectionNumber} markAsSelected={this.props.markAsSelected} selectedBeatID={this.props.selectedBeatID} getSelectedBeatID={this.props.getSelectedBeatID }/>
       beatsToRender.push(beat);
     }
+    var contextMenu = null;
+    if(this.state.context) {
+      contextMenu = <MeasureContextMenu removeMeasure={this.props.removeMeasure} measureNumber={this.props.measureNumber} resetRightClick={this.resetRightClick}/>
+    }
     return (
-      <div className={'measure'}>
+      <div onContextMenu={this.handleRightClick} className={'measure'}>
       	{beatsToRender}
+        {contextMenu}
       </div>
     );
   }

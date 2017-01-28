@@ -10,7 +10,8 @@ export default class ChartMaker extends React.Component {
 
     this.state = {
     	sections: [],
-      selectedBeatID: 'x',
+      selectedBeatID: '-1',
+      selectedSectionNumber: -1,
       reset: false
     }
 
@@ -20,6 +21,7 @@ export default class ChartMaker extends React.Component {
     this.getSelectedBeatID = this.getSelectedBeatID.bind(this);
     this.toggleReset = this.toggleReset.bind(this);
     this.resetClicked = this.resetClicked.bind(this);
+    this.markSectionAsSelected = this.markSectionAsSelected.bind(this);
   }
 
   addSection(name = 'chorus', numMeasures = 8) {
@@ -52,6 +54,12 @@ export default class ChartMaker extends React.Component {
 
   }
 
+  markSectionAsSelected(sectionNumber) {
+    this.setState({
+      selectedSectionNumber: sectionNumber
+    })
+  }
+
   getSelectedBeatID() {
     return this.state.selectedBeatID;
   }
@@ -64,7 +72,8 @@ export default class ChartMaker extends React.Component {
 
   resetClicked() {
     this.setState({
-      selectedBeatID: '-1'
+      selectedBeatID: '-1',
+      selectedSectionNumber: -1
     })
   }
 
@@ -75,11 +84,9 @@ export default class ChartMaker extends React.Component {
     var sectionsToRender = [];
 
     for(var i = 0; i < sections.length; i++) {
-     var section = <Section key={i} sectionNumber={i} removeSection={this.removeSection} markAsSelected={this.markAsSelected} selectedBeatID={this.state.selectedBeatID} getSelectedBeatID={this.getSelectedBeatID} reset={this.state.reset} />
+     var section = <Section key={i} sectionNumber={i} removeSection={this.removeSection} markAsSelected={this.markAsSelected} selectedBeatID={this.state.selectedBeatID} getSelectedBeatID={this.getSelectedBeatID} selectedSectionNumber={this.state.selectedSectionNumber} markSectionAsSelected={this.markSectionAsSelected} reset={this.state.reset} />
       sectionsToRender.push(section);
     }
-
-    console.log("sectionsToRender: ", sectionsToRender);
 
     return (
       <div onClick={this.resetClicked} className={'chart-maker'} >

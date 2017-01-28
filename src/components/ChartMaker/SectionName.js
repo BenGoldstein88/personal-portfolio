@@ -5,11 +5,7 @@ export default class SectionName extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-    	clicked: false
-    }
-
+    
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -23,16 +19,13 @@ export default class SectionName extends React.Component {
   }
 
   handleClick(e) {
-  	this.setState({
-  		clicked: !this.state.clicked
-  	})
+  	e.stopPropagation();
+  	this.props.markSectionAsSelected(this.props.sectionNumber);
   }
 
   handleKeyPress(e) {
     if(e.key === 'Enter') {
-      this.setState({
-      	clicked: false
-      });
+      this.props.markSectionAsSelected(-1);
     }
 
   }
@@ -40,7 +33,7 @@ export default class SectionName extends React.Component {
   render() {
     var thingToDisplay = <p className={'section-name'}>{this.props.name}</p>
 
-    if(this.state.clicked) {
+    if(this.props.selectedSectionNumber === this.props.sectionNumber) {
       thingToDisplay = <input ref={'input'} className={'section-name-input'} type={'text'} onKeyPress={this.handleKeyPress} onChange={this.handleChange} placeholder={this.props.name} autoFocus/>
     } 
     return (
