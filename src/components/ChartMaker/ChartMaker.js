@@ -47,7 +47,6 @@ export default class ChartMaker extends React.Component {
 
 
   markAsSelected(beatID) {
-    console.log("marking beat with ID: " + beatID);
 
     this.setState({
       selectedBeatID: beatID

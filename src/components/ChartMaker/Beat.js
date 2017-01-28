@@ -13,6 +13,7 @@ export default class Beat extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getBeatID = this.getBeatID.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
 
@@ -43,6 +44,32 @@ export default class Beat extends React.Component {
 
   }
 
+  handleKeyDown(e) {
+    console.log("e.key: ", e.key);
+    var measureNumber = this.props.measureNumber;
+    var sectionNumber = this.props.sectionNumber; 
+    if(e.key === 'ArrowRight') {
+      var beatNumber = parseInt(this.props.beatNumber)+1;
+      if(beatNumber > 3) {
+        beatNumber = 0;
+        measureNumber = parseInt(measureNumber)+1;
+      }
+      var nextBeatID = "" + sectionNumber + "" + measureNumber + "" + beatNumber;
+      this.props.markAsSelected(nextBeatID);
+
+    }
+    if(e.key === 'ArrowLeft') {
+      var beatNumber = parseInt(this.props.beatNumber)-1;
+      if(beatNumber < 0) {
+        beatNumber = 3;
+        measureNumber = parseInt(measureNumber)-1;
+      }
+      var nextBeatID = "" + sectionNumber + "" + measureNumber + "" + beatNumber;
+      this.props.markAsSelected(nextBeatID);
+    }
+      
+  }
+
   handleChange(e) {
     e.preventDefault();
     this.setState({
@@ -60,7 +87,7 @@ export default class Beat extends React.Component {
     } 
 
     return (
-      <div onClick={this.handleClick} onChange={this.handleChange} onKeyPress={this.handleKeyPress} className={className}>
+      <div onClick={this.handleClick} onChange={this.handleChange} onKeyPress={this.handleKeyPress} onKeyDown={this.handleKeyDown} className={className}>
       	{thingToDisplay}
       </div>
     );
