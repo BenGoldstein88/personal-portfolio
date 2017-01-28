@@ -80,11 +80,15 @@ export default class ChartMaker extends React.Component {
 
   removeSection(sectionNumber) {
     var sections = this.state.sections;
-    var clone = sections;
-    clone.splice(sectionNumber, 1);
+    console.log("sections: ", sections);
+    console.log("sectionNumber: ", sectionNumber);
+    // var clone = sections;
+    // clone.splice(sectionNumber, 1);
+    delete sections[sectionNumber];
+    console.log("sections: ", sections);
 
     this.setState({
-      sections: clone
+      sections: sections
     })
   }
 
@@ -95,8 +99,10 @@ export default class ChartMaker extends React.Component {
     var sectionsToRender = [];
 
     for(var i = 0; i < sections.length; i++) {
-     var section = <Section key={i} sectionNumber={i} removeSection={this.removeSection} markAsSelected={this.markAsSelected} selectedBeatID={this.state.selectedBeatID} getSelectedBeatID={this.getSelectedBeatID} selectedSectionNumber={this.state.selectedSectionNumber} markSectionAsSelected={this.markSectionAsSelected} reset={this.state.reset} />
-      sectionsToRender.push(section);
+      if(!!sections[i]){
+       var section = <Section key={i} sectionNumber={i} removeSection={this.removeSection} markAsSelected={this.markAsSelected} selectedBeatID={this.state.selectedBeatID} getSelectedBeatID={this.getSelectedBeatID} selectedSectionNumber={this.state.selectedSectionNumber} markSectionAsSelected={this.markSectionAsSelected} reset={this.state.reset} />
+        sectionsToRender.push(section);
+      }
     }
 
     return (

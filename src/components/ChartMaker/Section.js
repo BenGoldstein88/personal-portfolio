@@ -45,12 +45,14 @@ export default class Section extends React.Component {
   }
 
   removeMeasure(measureNumber) {
+  	console.log("measureNumber: ", measureNumber);
   	var measures = this.state.measures;
-  	var clone = measures;
-  	clone.splice(measureNumber, 1);
+  	delete measures[measureNumber]
+  	// var clone = measures;
+  	// clone.splice(measureNumber, 1);
 
   	this.setState({
-  		measures: clone
+  		measures: measures
   	})
 
   }
