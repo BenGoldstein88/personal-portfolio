@@ -3,6 +3,7 @@ import Measure from './Measure';
 import MeasureDisplay from './MeasureDisplay';
 import SectionName from './SectionName';
 import AddMeasureButton from './AddMeasureButton';
+import RemoveSectionButton from './RemoveSectionButton';
 
 export default class Section extends React.Component {
 
@@ -77,6 +78,7 @@ export default class Section extends React.Component {
       	<SectionName name={this.state.name} changeName={this.changeName} sectionNumber={this.props.sectionNumber} selectedSectionNumber={this.props.selectedSectionNumber} markSectionAsSelected={this.props.markSectionAsSelected}/>
       	{measuresToRender}
         <AddMeasureButton addMeasure={this.addMeasure}/>
+        <RemoveSectionButton removeSection={this.props.removeSection} sectionNumber={this.props.sectionNumber}/> 
       </div>
     );
   }

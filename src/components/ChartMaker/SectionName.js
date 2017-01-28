@@ -23,6 +23,10 @@ export default class SectionName extends React.Component {
   	this.props.markSectionAsSelected(this.props.sectionNumber);
   }
 
+  handleRightClick(e) {
+  	e.preventDefault();
+  }
+
   handleKeyPress(e) {
     if(e.key === 'Enter') {
       this.props.markSectionAsSelected(-1);
@@ -37,7 +41,7 @@ export default class SectionName extends React.Component {
       thingToDisplay = <input ref={'input'} className={'section-name-input'} type={'text'} onKeyPress={this.handleKeyPress} onChange={this.handleChange} placeholder={this.props.name} autoFocus/>
     } 
     return (
-      <div className={'section-name-wrapper'} onClick={this.handleClick} >
+      <div className={'section-name-wrapper'} onContextMenu={this.handleRightClick} onClick={this.handleClick} >
       	{thingToDisplay}
       </div>
     );

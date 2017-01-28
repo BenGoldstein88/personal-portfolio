@@ -22,6 +22,7 @@ export default class ChartMaker extends React.Component {
     this.toggleReset = this.toggleReset.bind(this);
     this.resetClicked = this.resetClicked.bind(this);
     this.markSectionAsSelected = this.markSectionAsSelected.bind(this);
+    this.removeSection = this.removeSection.bind(this);
   }
 
   addSection(name = 'chorus', numMeasures = 8) {
@@ -74,6 +75,16 @@ export default class ChartMaker extends React.Component {
     this.setState({
       selectedBeatID: '-1',
       selectedSectionNumber: -1
+    })
+  }
+
+  removeSection(sectionNumber) {
+    var sections = this.state.sections;
+    var clone = sections;
+    clone.splice(sectionNumber, 1);
+
+    this.setState({
+      sections: clone
     })
   }
 
