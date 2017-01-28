@@ -48,11 +48,14 @@ export default class Section extends React.Component {
   	console.log("measureNumber: ", measureNumber);
   	var measures = this.state.measures;
   	delete measures[measureNumber]
-  	// var clone = measures;
-  	// clone.splice(measureNumber, 1);
+  	var newMeasures = [];
+
+  	for(var i = 0; i < measures.length-1; i++) {
+  		newMeasures.push(i);
+  	}
 
   	this.setState({
-  		measures: measures
+  		measures: newMeasures
   	})
 
   }

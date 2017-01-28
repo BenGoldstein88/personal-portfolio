@@ -41,11 +41,6 @@ export default class ChartMaker extends React.Component {
 
   }
 
-  removeSection(name) {
-
-  }
-
-
   markAsSelected(beatID) {
 
     this.setState({
@@ -80,14 +75,17 @@ export default class ChartMaker extends React.Component {
   removeSection(sectionNumber) {
     var sections = this.state.sections;
     console.log("sections: ", sections);
-    console.log("sectionNumber: ", sectionNumber);
-    // var clone = sections;
-    // clone.splice(sectionNumber, 1);
+    var newSections = [];
     delete sections[sectionNumber];
     console.log("sections: ", sections);
+    for(var i = 0; i < sections.length; i++) {
+      if(!!sections[i]) {
+        newSections.push(sections[i]);
+      }
+    }
 
     this.setState({
-      sections: sections
+      sections: newSections
     })
   }
 
