@@ -109,9 +109,7 @@ export default class NavBarTop extends React.Component {
             ?
             </button>
             <span>
-        			<Button name="dark" onClick={this.handleNavButtonClick} ref={
-                    (el) => this._dark = el
-                    } className={classes}>
+        			<Button name="dark" onClick={this.handleNavButtonClick} className={classes}>
         			</Button>
             </span>
       		</div>

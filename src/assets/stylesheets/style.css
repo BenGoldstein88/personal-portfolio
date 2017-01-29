@@ -232,11 +232,22 @@ body {
 	font-weight: normal;
 	transition: font-size .5s, font-weight: .5s, background-color .7s;
 	-webkit-transition: font-size .5s, font-weight .5s, background-color .7s;
+
+	perspective: 800px;
+	transition: transform 1s;
+	/*transform: rotateY(5deg);*/
+	-webkit-transition: transform 1s;
 	/*border: 1px solid green;*/
 	
 }
 
 .project-card:hover {
+	transform-style: preserve-3d;
+	/*transform: rotate3d(360deg, 360deg, 360deg, 1);*/
+	/*transform: rotateZ(360deg);*/
+	transform: rotateY(360deg);
+	transition: transform .75s;
+	-webkit-transition: transform .75s;
 	overflow: auto;
 	font-size: 1.7em;
 	font-weight: bold;
@@ -246,6 +257,7 @@ body {
 }
 
 .project-card h1 {
+
 	color: black;
 	transition: color 1s;
 	-webkit-transition: color 1s;
