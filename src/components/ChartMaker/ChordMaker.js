@@ -1,13 +1,11 @@
 import React from 'react';
+import ChordInfo from './ChordInfo';
 
 export default class ChordMaker extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {
-
-    }
 
     this.findMajorChord = this.findMajorChord.bind(this);
     this.flatNote = this.flatNote.bind(this);
@@ -24,11 +22,13 @@ export default class ChordMaker extends React.Component {
 
   flatNote(note) {
   	var flatNote;
-  	if(note.length === 1 || note[note.length-1]==='b') {
-  		flatNote = note + 'b'
-  	} else {
-  		flatNote = note.substring(0,1);
-  	}
+  	if(note.length === 1) {
+  		flatNote = note + '♭'
+  	} else if(note[note.length-1]==='b' || note[note.length-1]==='♭'){
+  		flatNote = note.substring(0,1) +'𝄫'
+    } else {
+      flatNote = note.substring(0,1);
+    }
   	return flatNote;
 
   }
@@ -36,9 +36,9 @@ export default class ChordMaker extends React.Component {
   sharpNote(note) {
   	var sharpNote;
   	if(note.length === 1) {
-  		sharpNote = note + '#'
-  	} else if(note[note.length-1]==='#'){
-  		sharpNote = note.substring(0,1) + '*';
+  		sharpNote = note + '♯'
+  	} else if(note[note.length-1]==='#' || note[note.length-1]==='♯'){
+  		sharpNote = note.substring(0,1) + '𝄪';
   	} else {
   		sharpNote = note.substring(0,1);
   	}
@@ -47,6 +47,7 @@ export default class ChordMaker extends React.Component {
   }
 
   makeMinorChord(majorChord) {
+  	if(!majorChord) { return false;}
   	var majorChordArray = majorChord.split(' ');
   	var third = majorChordArray[1];
   	var flatThird = this.flatNote(third);
@@ -57,6 +58,7 @@ export default class ChordMaker extends React.Component {
   }
 
   makeAugmentedChord(majorChord) {
+  	if(!majorChord) { return false;}
   	var majorChordArray = majorChord.split(' ');
   	var fifth = majorChordArray[2];
   	var sharpFifth = this.sharpNote(fifth);
@@ -67,6 +69,7 @@ export default class ChordMaker extends React.Component {
   }
 
   makeDiminishedChord(majorChord) {
+  	if(!majorChord) { return false;}
   	var majorChordArray = majorChord.split(' ');
   	var fifth = majorChordArray[2];
   	var flatFifth = this.flatNote(fifth);
@@ -77,78 +80,81 @@ export default class ChordMaker extends React.Component {
   }
 
   addMajorSevenToChord(chord) {
-
+  	return false;
   }
 
   addDominantSevenToChord(chord) {
-
+  	return false;
   }
 
   addDiminishedSevenToChord(chord) {
-
+  	return false;
   }
 
   addNineToChord(chord) {
-
+  	return false;
   }
 
   addSixToChord(chord) {
-
+  	return false;
   }
 
   findMajorChord(root) {
   	var majorChord;
   	switch(root) {
-  		case: 'C'
+  		case 'C':
   			majorChord = 'C E G';
   			break;
-  		case: 'C#'
-  			majorChord = 'C# E# G#';
+  		case 'C#':
+  			majorChord = 'C♯ E♯ G♯';
   			break
-  		case: 'Db'
-  			majorChord = 'Db F Ab';
+  		case 'Db':
+  			majorChord = 'D♭ F A♭';
   			break;
-  		case: 'D'
-  			majorChord = 'D F# A';
+  		case 'D':
+  			majorChord = 'D F♯ A';
   			break;
-  		case: 'D#'
-  			majorChord = 'D# F* A#';
+  		case 'D#':
+  			majorChord = 'D♯ F𝄪 A♯';
   			break
-  		case: 'E'
-  			majorChord = 'E G# B';
+      case 'Eb':
+        majorChord = 'E♭ G B♭';
+        break;
+  		case 'E':
+  			majorChord = 'E G♯ B';
   			break;
-  		case: 'F'
+  		case 'F':
   			majorChord = 'F A C';
   			break;
-  		case: 'F#'
-  			majorChord = 'F# A# C#';
+  		case 'F#':
+  			majorChord = 'F♯ A♯ C♯';
   			break;
-  		case 'Gb'
-  			majorChord = 'Gb Bb Dd'
+  		case 'Gb':
+  			majorChord = 'G♭ B♭ D♭'
   			break;
-  		case: 'G'
+  		case 'G':
   			majorChord = 'G B D';
   			break;
-  		case: 'G#'
-  			majorChord = 'G# B# D#';
+  		case 'G#':
+  			majorChord = 'G♯ B♯ D♯';
   			break;
-  		case: 'Ab'
-  			majorChord = 'Ab C Eb';
+  		case 'Ab':
+  			majorChord = 'A♭ C E♭';
   			break;
-  		case: 'A'
-  			majorChord = 'A C# E';
+  		case 'A':
+  			majorChord = 'A C♯ E';
   			break;
-  		case: 'A#'
-  			majorChord = 'A# C* E#';
+  		case 'A#':
+  			majorChord = 'A♯ C𝄪 E♯';
   			break;
-  		case: 'Bb'
-  			majorChord = 'Bb D F';
+  		case 'Bb':
+  			majorChord = 'B♭ D F';
   			break;
-  		case: 'B'
-  			majorChord = 'B D# F#';
+  		case 'B':
+  			majorChord = 'B D♯ F♯';
   			break;
   		default:
-  			majorChord = '?';
+  			!majorChord;
   	}
   	return majorChord;
   }
@@ -157,7 +163,9 @@ export default class ChordMaker extends React.Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+        <ChordInfo findMajorChord={this.findMajorChord} makeMinorChord={this.makeMinorChord} makeAugmentedChord={this.makeAugmentedChord} makeDiminishedChord={this.makeDiminishedChord} />
+      </div>
     );
   }
 }

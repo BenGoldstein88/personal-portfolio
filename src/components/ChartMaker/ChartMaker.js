@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import SectionDisplay from './SectionDisplay';
 import AddSectionButton from './AddSectionButton';
+import ChordMaker from './ChordMaker';
 
 export default class ChartMaker extends React.Component {
 
@@ -106,6 +107,7 @@ export default class ChartMaker extends React.Component {
       <div onClick={this.resetClicked} className={'chart-maker'} >
       	<AddSectionButton addSection={this.addSection}/>
       	<SectionDisplay sections={sectionsToRender} />
+        <ChordMaker />
       </div>
     );
   }
