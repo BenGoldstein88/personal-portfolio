@@ -25,12 +25,14 @@ export default class ChordInfo extends React.Component {
     e.preventDefault();
 
     var currentRoot = e.target.value;
-    var firstLetter = currentRoot[0].toUpperCase();
-    var sanitizedCurrentRoot = firstLetter + currentRoot.substring(1, currentRoot.length);
+    if(!!currentRoot){ 
+      var firstLetter = currentRoot[0].toUpperCase();
+      var sanitizedCurrentRoot = firstLetter + currentRoot.substring(1, currentRoot.length);
 
-    this.setState({
-      currentRoot: sanitizedCurrentRoot
-    })
+      this.setState({
+        currentRoot: sanitizedCurrentRoot
+      })
+    }
   }
 
   render() {

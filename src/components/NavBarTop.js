@@ -31,7 +31,7 @@ export default class NavBarTop extends React.Component {
     this.state.toaster.show({ 
       message: message,
       canEscapeKeyClear: true,
-      timeout: 1000
+      timeout: 500
     })
   }
 
@@ -43,7 +43,7 @@ export default class NavBarTop extends React.Component {
       message: message,
       className: 'pt-dark',
       canEscapeKeyClear: true,
-        timeout: 1000
+        timeout: 500
       })    
   }
 
